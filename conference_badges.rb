@@ -23,6 +23,7 @@ end
 def printer(attendees)
   badges = batch_badge_creator(attendees)
   room_assignments = assign_rooms(attendees)
+  badges.concat(room_assignments)
   badges.each do |i|
     puts i
   end
